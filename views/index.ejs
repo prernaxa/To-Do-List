@@ -1,0 +1,35 @@
+<%- include("./partials/header.ejs") %>
+
+      <div class="container">
+<div class="date-div all-div item">
+  <h3>
+  <%= actualDate %>
+  </h3>
+</div>
+<% newToDo.forEach((todayDiv)=>{ %>
+  <%- todayDiv %>
+  <% }) %>
+  
+  <form class="form-list item" action="/submit" method="POST">
+    <input class= "text-list" type="text" name="newToDoList" placeholder="Add new item" />
+    <input class="submit-list" type="submit" value="+" />
+  </form>
+      </div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include("./partials/footer.ejs") %>
